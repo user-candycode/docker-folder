@@ -17,8 +17,8 @@
 	docker is a tool that helps in developing, building, deploying and executing software in isolation. ti does so by creating a 		container that completely wraps a software.
 <hr/>
 <br/>
-#docker installation
-	```zsh
+#docker installation:
+	```bash
 	1. sudo apt install docker.io
 	2. sudo apt remover docker.io -y
 	OR
@@ -30,6 +30,7 @@
 	5. sudo apt update
 	6. sudo apt install docker-ce
 	```
+	
 <hr/>
 <br/>
 #docker enviroment
