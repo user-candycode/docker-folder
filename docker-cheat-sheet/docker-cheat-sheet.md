@@ -19,16 +19,16 @@
 <br/>
 #docker installation
 	```zsh
-	1.sudo apt install docker.io
-	2.sudo apt remover docker.io -y
+	1. sudo apt install docker.io
+	2. sudo apt remover docker.io -y
 	OR
-	1.sudo apt update
-	2.sudo apt install apt-transport-http ca-certificates curl software-properties-common
-	3.curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-	4.sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+	1. sudo apt update
+	2. sudo apt install apt-transport-http ca-certificates curl software-properties-common
+	3. curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+	4. sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 	Now,
-	5.sudo apt update
-	6.sudo apt install docker-ce
+	5. sudo apt update
+	6. sudo apt install docker-ce
 	```
 <hr/>
 <br/>
