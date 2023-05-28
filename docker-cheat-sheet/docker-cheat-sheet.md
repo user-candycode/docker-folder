@@ -18,7 +18,7 @@
 <hr/>
 <br/>
 #docker installation
-	'''
+	```zsh
 	1.sudo apt install docker.io
 	2.sudo apt remover docker.io -y
 	OR
@@ -29,7 +29,7 @@
 	Now,
 	5.sudo apt update
 	6.sudo apt install docker-ce
-	'''
+	```
 <hr/>
 <br/>
 #docker enviroment
