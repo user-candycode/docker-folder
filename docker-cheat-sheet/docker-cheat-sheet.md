@@ -2,7 +2,9 @@
 	tech_Lead:your software not working on my system
 	dev1:it works on my computer 
 	tech_Lead:then ship your computer to the customer
+<hr/>
 <br/>
+
 #what is containers?
 	container is a software itself that wrap all the part of a code and all its dependencies into a single deployable unit that can be used on different systems and servers.
 
