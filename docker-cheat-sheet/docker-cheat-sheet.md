@@ -4,18 +4,19 @@
 	tech_Lead:then ship your computer to the customer
 <hr/>
 <br/>
-
 #what is containers?
 	container is a software itself that wrap all the part of a code and all its dependencies into a single deployable unit that can be used on different systems and servers.
 
+<hr/>
+<br/>
 #why do we need containers?
 	earlier we used virtualized enviroments in virtual machines which we complete os running inside the host os then,
-	some group of people noticed that we don't need to compute full os inside the host os if we are only going to use a part of this virtual os,
-	so better to disect the virtualization into layers and share the layers that are not necessarily required to be exclusive to this virtual enviroment,
+	some group of people noticed that we don't need to compute full os inside the host os if we are only going to use a part of this 	 virtual os, so better to disect the virtualization into layers and share the layers that are not necessarily required to be 		exclusive to this virtual enviroment,
 
 #what is docker?
-	docker is a tool that helps in developing, building, deploying and executing software in isolation. ti does so by creating a container that completely wraps a software.
-
+	docker is a tool that helps in developing, building, deploying and executing software in isolation. ti does so by creating a 		container that completely wraps a software.
+<hr/>
+<br/>
 #docker installation
 	1.sudo apt install docker.io
 	2.sudo apt remover docker.io -y
@@ -27,7 +28,8 @@
 	Now,
 	5.sudo apt update
 	6.sudo apt install docker-ce
-
+<hr/>
+<br/>
 #docker enviroment
 	-docker engine
 		docker engine is a set of technologies that allows for creation and management of all docker processes it has 3 major parts to it.
@@ -87,12 +89,15 @@
 	-docker swarm
 		(swarm or cluster) its a orchestration tool that allows us to manage multiple container
 
-
+<hr/>
+<br/>
 #docker files
 	docker files are basically scripts that you can write and then build into an image the image can be run to create the container. Its like shell script. create a file named DOCKERFILE.
 	#command
 		1.docker bulid .
 
+<hr/>
+<br/>
 #docker FORMAT
 	FROM
 	ADD
@@ -105,10 +110,14 @@
 	ENTRYPOINT
 	LABEL allows to add metadata to your image
 
+<hr/>
+<br/>
 #docker file best practices
 	.dockerignore
 	decople applications(eg put database in seperate container and application in different container)
 
+<hr/>
+<br/>
 #Docker storage
 	-Volumes(uses --volume)
 		#commands
@@ -128,6 +137,8 @@
 		--btrfs
 		--vfs
 
+<hr/>
+<br/>
 #docker networking
 	A docker is basically a connection between one or more containers.
 	-bridge
@@ -167,12 +178,26 @@
 	-macvlan
 	-none
 
+<hr/>
+<br/>
 #docker compose
+<hr/>
+<br/>
 #orchestration
+<hr/>
+<br/>
 #docker swarm
+<hr/>
+<br/>
 #ECR & ECS
+<hr/>
+<br/>
 #Monitoring in Docker
+<hr/>
+<br/>
 #kubernetes
+<hr/>
+<br/>
 
 
 #commands
