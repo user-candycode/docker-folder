@@ -1,43 +1,43 @@
-#issues we face before containerazation 
+<h2>Issues we face before containerazation
 	tech_Lead:your software not working on my system
-	dev1:it works on my computer 
-	tech_Lead:then ship your computer to the customer
+	dev1:it works on my computer
+	tech_Lead:then ship your computer to the customer</h2>
 <hr/>
-<br/>
-#what is containers?
-	container is a software itself that wrap all the part of a code and all its dependencies into a single deployable unit that can be used on different systems and servers.
 
+<h2>What is containers?
+	container is a software itself that wrap all the part of a code and all its dependencies into a single deployable unit that can be used on different systems and servers.</h2>
 <hr/>
-<br/>
-#why do we need containers?
+
+<h2>Why do we need containers?
 	earlier we used virtualized enviroments in virtual machines which we complete os running inside the host os then,
-	some group of people noticed that we don't need to compute full os inside the host os if we are only going to use a part of this 	 virtual os, so better to disect the virtualization into layers and share the layers that are not necessarily required to be 		exclusive to this virtual enviroment,
-
-#what is docker?
-	docker is a tool that helps in developing, building, deploying and executing software in isolation. ti does so by creating a 		container that completely wraps a software.
+	some group of people noticed that we don't need to compute full os inside the host os if we are only going to use a part of this virtual os,
+	so better to disect the virtualization into layers and share the layers that are not necessarily required to be exclusive to this virtual enviroment,</h2>
 <hr/>
-<br/>
-#docker installation:
-<br/>
-	```bash
+
+<h2>What is docker?
+	docker is a tool that helps in developing, building, deploying and executing software in isolation. ti does so by creating a container that completely wraps a software.</h2>
+<hr/>
+
+<h2>Docker installation</h2>
+
 	1. sudo apt install docker.io
 	2. sudo apt remover docker.io -y
+
 	OR
-	1. sudo apt update
-	2. sudo apt install apt-transport-http ca-certificates curl software-properties-common
-	3. curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-	4. sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
+	1.sudo apt update
+	2.sudo apt install apt-transport-http ca-certificates curl software-properties-common
+	3.curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+	4.sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 	Now,
-	5. sudo apt update
-	6. sudo apt install docker-ce
-	```
-	
-<hr/>
-<br/>
-#docker enviroment
+	5.sudo apt update
+	6.sudo apt install docker-ce
+
+<h2>docker enviroment</h2>
+
 	-docker engine
 		docker engine is a set of technologies that allows for creation and management of all docker processes it has 3 major parts to it.
-			=docker cli		=docker api 	=docekr daemon
+			* docker cli		* docker api 	 * docker daemon
 	-docker objects
 			--docker images:
 					Set of instructions that are used to create containers and execute code inside it.
@@ -80,10 +80,10 @@
 	-docker repository
 		Storage location for docker image, these images can be versioned as well.
 		# Commands
-		1.sudo docker pull ubuntu
-		2.sudo docker tag existing-custom-image username/new_name-given-to-this-existing-image
-		3.docker login
-		4.docker push
+			1. sudo docker pull ubuntu
+			2. sudo docker tag existing-custom-image username/new_name-given-to-this-existing-image
+			3. sudo docker login
+			4. sudo docker push
 
 
 
@@ -93,38 +93,37 @@
 	-docker swarm
 		(swarm or cluster) its a orchestration tool that allows us to manage multiple container
 
-<hr/>
-<br/>
-#docker files
-	docker files are basically scripts that you can write and then build into an image the image can be run to create the container. Its like shell script. create a file named DOCKERFILE.
-	#command
-		1.docker bulid .
 
-<hr/>
-<br/>
-#docker FORMAT
+<h2>Docker files
+	docker files are basically scripts that you can write and then build into an image the image can be run to create the container. Its like shell script. create a file named DOCKERFILE.</h2>
+	# command
+
+		1. sudo docker bulid .
+
+<h2>Docker FORMAT</h2>
+
 	FROM
 	ADD
 	COPY
-	RUN use this to run commands that you want to run only during the creation of a container 
+	RUN: Use this to run commands that you want to run only during the creation of a container.
 	WORKDIR
-	CMD use this if you want to run commands after container starts
+	CMD: Use this if you want to run commands after container starts<br/>
 	VOLUME
-	EXPOSE this instruction tells what port the container should be exposed at. But this can only happen for internal network the host will not be able to access the container from this port  
+	EXPOSE this instruction tells what port the container should be exposed at. But this can only happen for internal network the host will not be able to access the container from this port.
 	ENTRYPOINT
-	LABEL allows to add metadata to your image
+	LABEL: Allows to add metadata to your image
 
-<hr/>
-<br/>
-#docker file best practices
-	.dockerignore
+</h2>
+
+<h2>Docker file best practices</h2>
+	<h6>.dockerignore:</h6>
+
 	decople applications(eg put database in seperate container and application in different container)
 
-<hr/>
-<br/>
-#Docker storage
+<h2>Docker storage</h2>
+
 	-Volumes(uses --volume)
-		#commands
+		--commands:
 			1.sudo docker volume create give-volumne-name
 			2.sudo docker volume ls
 			3.sudo docker volume inspect give-volumne-name
@@ -133,19 +132,21 @@
 				sudo docker volume prune
 	-Bind mount(uses --mount)
 	-Tmpfs mount(uses --mount)
-	In situation where you have to write in docker's writable layer you can make use of specific storage drivers.
-	these drivers are:
+
+In situation where you have to write in docker's writable layer you can make use of specific storage drivers.
+
+	These drivers are:
 		--overlay
 		--aufs
 		--devicemapper
 		--btrfs
 		--vfs
 
-<hr/>
-<br/>
-#docker networking
-	A docker is basically a connection between one or more containers.
-	-bridge
+## Docker networking
+
+A docker is basically a connection between one or more containers.
+
+* bridge
 		--default docker bridge network
 		--custom docker bridge network
 		#commands
@@ -160,51 +161,56 @@
 			5.Inspect container
 				sudo docker container inspect Mycon
 
-	-overlay
-		--docker daemon hosts that are connected by means of overlay network can communicate with each other 
+* overlay
+		--docker daemon hosts that are connected by means of overlay network can communicate with each other
 		--outside of host, inter docker daemon communication is possible.
 		#commands
 			1.create overlay network
 				sudo docker network create --driver overlay fun-net
 			2.assign our created overlay netework named fun-net to a container:
 				sudo docker run -it -d --network fun-net --name Myoverlaycon ubuntu
-			
 
-	-host
-		--docker containers that are connected to hosts 
-		--the container shares their host ip they dont have there own ip address 
+* host
+		--docker containers that are connected to hosts
+		--the container shares their host ip they dont have there own ip address
 			1.assign a host network to a containers
 				sudo docker run -it -d --network host --name mycontainer nginx:latest
 			2.inspect the container
 				sudo docker container inspect mycon
 			3.get the nginx page
-				curl localhost 
-	-macvlan
-	-none
+				curl localhost
 
-<hr/>
-<br/>
-#docker compose
-<hr/>
-<br/>
-#orchestration
-<hr/>
-<br/>
-#docker swarm
-<hr/>
-<br/>
-#ECR & ECS
-<hr/>
-<br/>
-#Monitoring in Docker
-<hr/>
-<br/>
-#kubernetes
-<hr/>
-<br/>
+* macvlan
 
+* none
 
-#commands
+## Docker compose
+## Orchestration
+## Docker swarm
+
+works on worker manager concept, where manager tells push tasks to worker nodes.
+
+		#Commands:
+		1. sudo swarm init
+			o/p: generates a token
+		2. sudo docker swarm join --token string_of_char_as_tokens
+		3. sudo docker network create --driver overlay fun-net
+		4. sudo docker network ls
+		5. sudo docker ps
+
+		--services is an command that allows us to define various parameters in a single service
+		#command
+		1. sudo docker service create --name fun-service --network fun-net --replicas 3 nginx:latest
+		2. sudo docker service ps fun-service
+		3. sudo docker service rm fun-service
+
+## ECR & ECS
+
+## Monitoring in Docker
+
+## Kubernetes
+
+	#Commands:
 	1. Pull:
 		docker pull ubuntu
 	2. List all images:
@@ -242,5 +248,3 @@
 	17.Attach a bind mount to container:
 		sudo docker run -it -d --name ConC --mount type=bind,source=/home/Downloads/random_folder,target=/apps ubuntu
 		sudo docker run -it -d --name ConC --mount type=bind,source=/home/Downloads/random_folder,target=/apps,readonly ubuntu
-
-	
