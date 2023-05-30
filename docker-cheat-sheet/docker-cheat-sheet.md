@@ -210,7 +210,7 @@ works on worker manager concept, where manager tells push tasks to worker nodes.
 
 ## Kubernetes
 
-	#Commands:
+#Commands:
 	1. Pull:
 		docker pull ubuntu
 	2. List all images:
